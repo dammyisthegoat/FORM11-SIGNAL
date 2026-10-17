@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f2e9" />
+  <meta name="description" content="FORM11 SIGNAL is an editorial-style business intelligence dashboard concept by FORM11 TECH STUDIOS." />
+  <title>SIGNAL — FORM11</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#overview" aria-label="FORM11 SIGNAL overview">
+        <span class="brand-symbol" aria-hidden="true"><span></span><span></span><span></span></span>
+        <span class="brand-wordmark">FORM<span>11</span><small>SIGNAL</small></span>
+      </a>
+      <div class="workspace-label">WORKSPACE <span class="workspace-dot"></span></div>
+      <nav class="primary-nav">
+        <a class="nav-link active" href="#overview" data-page="overview"><span class="nav-icon" data-icon="grid"></span><span>Overview</span><span class="nav-count">01</span></a>
+        <a class="nav-link" href="#analytics" data-page="analytics"><span class="nav-icon" data-icon="chart"></span><span>Revenue analytics</span></a>
+        <a class="nav-link" href="#orders" data-page="orders"><span class="nav-icon" data-icon="receipt"></span><span>Orders</span><span class="nav-pill" id="pending-count">8</span></a>
+        <a class="nav-link" href="#customers" data-page="customers"><span class="nav-icon" data-icon="users"></span><span>Customers</span></a>
+        <a class="nav-link" href="#products" data-page="products"><span class="nav-icon" data-icon="box"></span><span>Products</span></a>
+        <a class="nav-link" href="#reports" data-page="reports"><span class="nav-icon" data-icon="file"></span><span>Reports</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-note">
+          <span class="note-kicker"><span class="tiny-star">✳</span> A CLEARER PICTURE</span>
+          <p>Good decisions begin with <em>good signals.</em></p>
+          <span class="note-rule"></span>
+          <span class="note-small">Your business, in perspective.</span>
+        </div>
+        <a class="nav-link settings-link" href="#settings" data-page="settings"><span class="nav-icon" data-icon="settings"></span><span>Settings</span><span class="nav-arrow">↗</span></a>
+        <div class="sidebar-credit"><span class="credit-mark">F11</span><span>FORM11 TECH STUDIOS<br><small>INDEPENDENT CONCEPT · 2026</small></span></div>
+      </div>
+    </aside>
+
+    <div class="mobile-scrim" id="mobile-scrim"></div>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="icon-button menu-toggle" id="menu-toggle" aria-label="Open navigation"><span data-icon="menu"></span></button>
+          <div class="breadcrumb"><span>Workspace</span><span class="crumb-slash">/</span><strong id="breadcrumb-current">Overview</strong></div>
+        </div>
+        <div class="topbar-actions">
+          <span class="demo-status"><span></span> SAMPLE DATA</span>
+          <span class="topbar-divider"></span>
+          <button class="icon-button notification-button" id="notification-button" aria-label="Notifications"><span data-icon="bell"></span><i></i></button>
+          <button class="profile-button" id="profile-button" aria-label="Open profile menu"><span class="avatar">A</span><span class="profile-copy"><b>Alex Morgan</b><small>Workspace owner</small></span><span class="chevron">⌄</span></button>
+        </div>
+      </header>
+
+      <section class="page-wrap" id="page-content" aria-live="polite"></section>
+      <footer class="app-footer"><span>Designed &amp; Built by <b>FORM11 TECH STUDIOS.</b></span><span class="footer-right">SIGNAL / <span id="footer-page">OVERVIEW</span> <i>•</i> <span id="current-year">2026</span></span></footer>
+    </main>
+  </div>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+  <div id="modal-root"></div>
+  <div class="popover-menu hidden" id="profile-menu"><span class="popover-eyebrow">SIGNED IN AS</span><strong>Alex Morgan</strong><small>alex@signal.demo</small><hr/><button data-action="profile-settings">Workspace preferences <span>↗</span></button><button data-action="profile-logout">Sign out <span>↗</span></button></div>
+  <div class="popover-menu notification-menu hidden" id="notification-menu"><span class="popover-eyebrow">INBOX · 02 UNREAD</span><div class="notification-item" data-notification-type="weekly"><span class="notification-dot"></span><div><b>Weekly summary is ready</b><small>Your sample report for Oct 12–18 is available.</small></div></div><div class="notification-item" data-notification-type="inventory"><span class="notification-dot terracotta"></span><div><b>Inventory needs a look</b><small>Two products are running low in the demo store.</small></div></div><div class="notification-item" data-notification-type="orders"><span class="notification-dot"></span><div><b>Sample order is processing</b><small>SG-10842 is awaiting the next fulfilment step.</small></div></div><button class="popover-full" data-action="view-reports">View all reports <span>→</span></button></div>
+  <script src="app.js"></script>
+</body>
+</html>
